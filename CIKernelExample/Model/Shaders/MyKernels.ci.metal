@@ -5,9 +5,6 @@
 //  Created by Alexander Pelevinov on 29.04.2023.
 //
 
-#include <metal_stdlib>
-using namespace metal;
-
 #include <CoreImage/CoreImage.h>
 #include <metal_stdlib>
 using namespace metal;
@@ -18,16 +15,8 @@ using namespace metal;
 
 extern "C" {
     namespace coreimage {
-        float4 passthroughFilterKernel(sample_t s) {
-            return s;
-        }
-    }
-}
-
-//MARK: -YCbCr to RGB
-extern "C" {
-    namespace coreimage {
         
+        //MARK: -YCbCr to RGB
         float4 ycbcrToRgb(float4 pixel) {
           float y  = pixel.r;
           float cb = pixel.g;
@@ -56,12 +45,8 @@ extern "C" {
             float cr = redDifference(s);
             return float4(y, cb ,cr, s.a);
         }
-    }
-}
-
-//MARK: - bilateral filter
-extern "C" {
-    namespace coreimage {
+        
+        //MARK: - bilateral filter
         
         float4 bilateralFilterKernel(sampler src, float kernelRadius_f, float sigmaSpatial, float sigmaRange) {
             float4 input = src.sample(src.coord());
@@ -80,6 +65,7 @@ extern "C" {
             }
             return float4(premultipliedRunningSum / weightRunningSum, input.a);
         }
+        
         
     }
 }

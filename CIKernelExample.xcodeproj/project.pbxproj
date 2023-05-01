@@ -17,6 +17,8 @@
 		C98D9B4429FD8BC8005EA174 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D9B4329FD8BC8005EA174 /* ImageProcessor.swift */; };
 		C98D9B4829FD8CB7005EA174 /* MyKernels.ci.metal in Sources */ = {isa = PBXBuildFile; fileRef = C98D9B4729FD8CB7005EA174 /* MyKernels.ci.metal */; };
 		C98D9B4A29FD8CEE005EA174 /* FiltersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D9B4929FD8CEE005EA174 /* FiltersService.swift */; };
+		C9F2501529FFE3DB0073A9A9 /* ProcessingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F2501429FFE3DB0073A9A9 /* ProcessingContext.swift */; };
+		C9F2501729FFE6F50073A9A9 /* TextureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F2501629FFE6F50073A9A9 /* TextureProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -62,6 +64,8 @@
 		C98D9B4329FD8BC8005EA174 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		C98D9B4729FD8CB7005EA174 /* MyKernels.ci.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyKernels.ci.metal; sourceTree = "<group>"; };
 		C98D9B4929FD8CEE005EA174 /* FiltersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersService.swift; sourceTree = "<group>"; };
+		C9F2501429FFE3DB0073A9A9 /* ProcessingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingContext.swift; sourceTree = "<group>"; };
+		C9F2501629FFE6F50073A9A9 /* TextureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		C98D9B3429FD8B9B005EA174 /* CIKernelExample */ = {
 			isa = PBXGroup;
 			children = (
+				C9F2501329FFE3680073A9A9 /* ImageProcessing */,
 				C98D9B3529FD8B9B005EA174 /* CIKernelExampleApp.swift */,
 				C96A736329FE553200B2B1FC /* Model */,
 				C96A736129FE552100B2B1FC /* Views */,
@@ -170,6 +175,15 @@
 				C98D9B3C29FD8B9C005EA174 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9F2501329FFE3680073A9A9 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2501429FFE3DB0073A9A9 /* ProcessingContext.swift */,
+				C9F2501629FFE6F50073A9A9 /* TextureProvider.swift */,
+			);
+			path = ImageProcessing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F2501729FFE6F50073A9A9 /* TextureProvider.swift in Sources */,
 				C96A736729FE74E900B2B1FC /* MediaPicker.swift in Sources */,
 				C98D9B3829FD8B9B005EA174 /* ContentView.swift in Sources */,
+				C9F2501529FFE3DB0073A9A9 /* ProcessingContext.swift in Sources */,
 				C96A735F29FE500700B2B1FC /* MainView.swift in Sources */,
 				C98D9B4429FD8BC8005EA174 /* ImageProcessor.swift in Sources */,
 				C98D9B3629FD8B9B005EA174 /* CIKernelExampleApp.swift in Sources */,
